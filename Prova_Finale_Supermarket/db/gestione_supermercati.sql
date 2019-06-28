@@ -16,6 +16,15 @@
 CREATE DATABASE IF NOT EXISTS `gestione_supermercati` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `gestione_supermercati`;
 
+CREATE Table IF NOT EXISTS `abitanti_cpr`
+(
+`comune` VARCHAR(25),
+ `provincia` VARCHAR(25), 
+ `regione` VARCHAR(25), 
+ `abitanti`INT
+ 
+) ENGINE=INNODB; 
+
 -- Dump dei dati della tabella gestione_supermercati.abitanti_cpr: ~284 rows (circa)
 /*!40000 ALTER TABLE `abitanti_cpr` DISABLE KEYS */;
 INSERT INTO `abitanti_cpr` (`comune`, `provincia`, `regione`, `abitanti`) VALUES
@@ -305,6 +314,15 @@ INSERT INTO `abitanti_cpr` (`comune`, `provincia`, `regione`, `abitanti`) VALUES
 	('Viterbo', '(VT) ', '    LAZIO', 6309);
 /*!40000 ALTER TABLE `abitanti_cpr` ENABLE KEYS */;
 
+CREATE Table IF NOT EXISTS `elenco_supermarket`
+
+(`ragione` VARCHAR(25), 
+`indirizzo` VARCHAR(25), 
+`cap` VARCHAR(25), 
+`citta` VARCHAR(25), 
+`provincia` VARCHAR(25), 
+`regione` VARCHAR(25)
+) ENGINE=INNODB; 
 -- Dump dei dati della tabella gestione_supermercati.elenco_supermarket: ~16.262 rows (circa)
 /*!40000 ALTER TABLE `elenco_supermarket` DISABLE KEYS */;
 INSERT INTO `elenco_supermarket` (`ragione`, `indirizzo`, `cap`, `citta`, `provincia`, `regione`) VALUES
